@@ -1,0 +1,940 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTKO GFX | Premium Minecraft Thumbnails</title>
+    <meta name="description" content="Award-winning Minecraft thumbnail designs. High CTR, professional, and eye-catching.">
+    
+    <!-- کد تایید گوگل کنسول شما -->
+    <meta name="google-site-verification" content="V4d6TiTw0sEHqjkgGdkEejxO4MGxCJamUGUtUTzr_3Q" />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://otkogfx.netlify.app/">
+    <meta property="og:title" content="OTKO GFX | Premium Minecraft Thumbnails">
+    <meta property="og:description" content="High CTR • Professional • Eye Catching Minecraft Thumbnails">
+    <meta property="og:image" content="https://otkogfx.netlify.app/images/thumb1.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Press+Start+2P&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS اختصاصی -->
+    <style>
+        .mc-font {
+            font-family: 'Press Start 2P', cursive, sans-serif !important;
+            letter-spacing: 2px;
+        }
+
+        /* منو و لوگوی واضح‌تر */
+        .logo {
+            font-family: 'Press Start 2P', cursive, sans-serif !important;
+            font-size: 1.3rem !important;
+            color: #fff !important;
+            text-shadow: 0 0 10px rgba(46, 213, 115, 0.6);
+        }
+
+        body {
+            background-color: #0b0f19 !important;
+            color: #e5e7eb;
+            margin: 0;
+            padding: 0;
+            cursor: auto !important; /* موس استاندارد بدون باگ */
+        }
+
+        /* ====== فیکس کردن بنر و منوی بالایی (Sticky / Fixed) ====== */
+        .top-header-holder {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        .top-promo-banner {
+            background: linear-gradient(90deg, rgba(46, 213, 115, 0.2), rgba(88, 101, 242, 0.25), rgba(46, 213, 115, 0.2));
+            border-bottom: 1px solid rgba(46, 213, 115, 0.4);
+            color: #fff;
+            padding: 10px 15px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .top-promo-badge {
+            background: #2ed573;
+            color: #000;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.6rem;
+        }
+
+        .glass-nav {
+            position: relative !important;
+            top: 0 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+
+        /* ====== اصلاحات هوم (بزرگ‌تر شدن و فوکوس روی عنوان کار) ====== */
+        .hero-content {
+            animation: heroEntrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+
+        .hero-brand-subtitle {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+            color: #2ed573;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px rgba(46, 213, 115, 0.6);
+        }
+
+        /* تیتر خیلی بزرگ و خوانا */
+        .hero .main-job-title {
+            font-family: 'Space Grotesk', sans-serif !important;
+            font-size: 4.2rem !important;
+            font-weight: 900 !important;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #ffffff 30%, #2ed573 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .hero .description {
+            font-size: 1.3rem !important;
+            color: #d1d5db;
+            margin-bottom: 35px;
+        }
+
+        /* ====== استایل اختصاصی کلمات بولد ====== */
+        strong, b, .highlight-word {
+            font-family: 'Space Grotesk', sans-serif !important;
+            color: #2ed573 !important;
+            font-weight: 700 !important;
+            text-shadow: 0 0 10px rgba(46, 213, 115, 0.3);
+        }
+
+        /* ====== تامنیل‌ها و کارت‌ها ====== */
+        .masonry-item {
+            border-radius: 18px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(18, 24, 38, 0.6);
+        }
+
+        .masonry-item img {
+            width: 100%;
+            display: block;
+            border-radius: 18px;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+            filter: brightness(0.95) contrast(1.05);
+        }
+
+        .masonry-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #2ed573;
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.9), 0 0 25px rgba(46, 213, 115, 0.4);
+        }
+
+        .masonry-item:hover img {
+            transform: scale(1.08);
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        .bg-glow {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle at 50% 30%, rgba(46, 213, 115, 0.22), transparent 60%),
+                        radial-gradient(circle at 80% 80%, rgba(88, 101, 242, 0.15), transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05) !important;
+            backdrop-filter: blur(16px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        }
+
+        /* دکمه‌های ۳D دیسکورد و تلگرام */
+        .order-buttons-3d {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+            perspective: 1200px;
+            margin-top: 2rem;
+        }
+
+        .btn-3d {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all 0.4s ease;
+            background: rgba(18, 24, 38, 0.9);
+        }
+
+        .btn-3d-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+        }
+
+        .btn-discord-3d { border: 2px solid rgba(88, 101, 242, 0.5); box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.8); }
+        .btn-discord-3d .btn-3d-icon { background: linear-gradient(145deg, #6975f3, #4752c4); color: #fff; }
+        .btn-discord-3d:hover { transform: translateY(-8px); border-color: #5865F2; }
+
+        .btn-telegram-3d { border: 2px solid rgba(42, 171, 238, 0.5); box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.8); }
+        .btn-telegram-3d .btn-3d-icon { background: linear-gradient(145deg, #3db5f5, #1d8cc4); color: #fff; }
+        .btn-telegram-3d:hover { transform: translateY(-8px); border-color: #2AABEE; }
+
+        /* دکمه‌های تخفیف */
+        .discount-trigger-btn {
+            background: linear-gradient(135deg, rgba(46, 213, 115, 0.2), rgba(30, 144, 255, 0.2));
+            border: 1px dashed #2ed573;
+            color: #2ed573;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+        .discount-trigger-btn:hover { transform: scale(1.05); box-shadow: 0 0 25px rgba(46, 213, 115, 0.5); }
+
+        .yt-discount-btn {
+            background: linear-gradient(135deg, rgba(255, 71, 87, 0.2), rgba(255, 0, 0, 0.2));
+            border: 1px dashed #ff4757;
+            color: #ff4757;
+        }
+
+        /* پاپ‌آپ‌ها */
+        .passcode-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(14px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .passcode-box {
+            background: #0d1322;
+            border: 2px solid #2ed573;
+            box-shadow: 0 0 45px rgba(46, 213, 115, 0.4);
+            border-radius: 24px;
+            padding: 2.5rem;
+            max-width: 460px; width: 90%;
+            text-align: center;
+            position: relative;
+        }
+        .close-modal-btn { position: absolute; top: 15px; right: 20px; color: #888; font-size: 1.5rem; cursor: pointer; }
+
+        .countdown-number { font-family: 'Press Start 2P', cursive; font-size: 4rem; color: #2ed573; }
+        .passcode-result { margin-top: 15px; background: rgba(46, 213, 115, 0.12); border: 1px solid #2ed573; border-radius: 12px; padding: 20px; display: none; }
+        .passcode-code-display { font-family: 'Press Start 2P', cursive; font-size: 0.9rem; color: #2ed573; background: #000; padding: 10px 16px; border-radius: 8px; display: inline-block; margin-top: 12px; }
+
+        .expiry-timer-box { margin-top: 15px; background: rgba(255, 71, 87, 0.15); border: 1px solid #ff4757; border-radius: 8px; padding: 10px 15px; font-family: 'Space Grotesk', sans-serif; color: #ff4757; font-weight: 700; }
+        .expiry-timer-box span { font-family: 'Press Start 2P', cursive; color: #fff; }
+
+        /* Before & After */
+        .ba-tabs-nav { display: flex; justify-content: center; gap: 15px; margin-top: 2rem; margin-bottom: 1.5rem; }
+        .ba-tab-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); color: #a0aec0; padding: 10px 22px; border-radius: 30px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; cursor: pointer; }
+        .ba-tab-btn.active { background: #2ed573; color: #000; border-color: #2ed573; box-shadow: 0 0 20px rgba(46, 213, 115, 0.5); }
+
+        .ba-slider-container { max-width: 900px; margin: 0 auto; position: relative; border-radius: 20px; overflow: hidden; border: 2px solid rgba(46, 213, 115, 0.4); aspect-ratio: 16 / 9; display: none; }
+        .ba-slider-container.active { display: block; }
+        .ba-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+        .ba-after { position: absolute; top: 0; left: 0; height: 100%; width: 50%; overflow: hidden; border-right: 3px solid #2ed573; z-index: 2; }
+        .ba-after img { position: absolute; top: 0; left: 0; height: 100%; object-fit: cover; }
+        .ba-slider-input { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; z-index: 5; cursor: ew-resize; }
+        .ba-label { position: absolute; bottom: 15px; padding: 6px 14px; background: rgba(0,0,0,0.7); color: white; font-family: 'Press Start 2P', cursive; font-size: 0.65rem; border-radius: 6px; z-index: 3; }
+        .ba-label-before { right: 15px; } .ba-label-after { left: 15px; color: #2ed573; border: 1px solid #2ed573; }
+
+        @media (max-width: 900px) {
+            .hero .main-job-title { font-size: 2.5rem !important; }
+        }
+    </style>
+</head><body>
+
+    <!-- هدر بالای صفحه که هماهنگ فیکس (Sticky) می‌ماند -->
+    <div class="top-header-holder">
+        <div class="top-promo-banner">
+            <span class="top-promo-badge">LIMITED OFFER</span>
+            ⚡ Get <b>10% OFF</b> First Order — Valid for <b>1 Month Only!</b>
+        </div>
+
+        <nav class="glass-nav">
+            <div class="logo">OTKO GFX<span>.</span></div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#software">Software</a>
+                <a href="#process">Process</a>
+                <a href="#info-section">FAQ & CTR</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#order-section">Order</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <h1 class="loader-logo">OTKO GFX</h1>
+            <div class="progress-bar"><div class="progress"></div></div>
+        </div>
+    </div>
+
+    <div class="bg-glow"></div>
+
+    <!-- Floating Discord Button -->
+    <a href="https://discord.com/users/otko_1z" target="_blank" class="floating-discord glass" aria-label="Order on Discord">
+        <i class="fab fa-discord"></i>
+        <span>Order via Discord</span>
+    </a>
+
+    <!-- Hero Section با اصلاحات مهدی نمدی -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <!-- برند اختصاصی به عنوان ساب‌تیتر -->
+            <p class="hero-brand-subtitle">OTKO GFX DESIGN STUDIO</p>
+            
+            <!-- تیتر اصلی و بسیار بزرگ برای معرفی کار -->
+            <h1 class="main-job-title">MINECRAFT THUMBNAIL DESIGNER</h1>
+            
+            <p class="description">High CTR <span class="dot">•</span> 3D Renders <span class="dot">•</span> Eye Catching Lighting</p>
+            
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">
+                    View Portfolio <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#order-section" class="btn btn-outline glass">
+                    <i class="fas fa-shopping-cart"></i> Order Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="about-container grid-2">
+            <div class="about-text reveal">
+                <h2 class="section-title">Elevate Your <span>Click-Through Rate</span></h2>
+                <p>I specialize in crafting high-end, <b>cinematic Minecraft thumbnails</b> that demand attention. With a deep understanding of <b>YouTube algorithm psychology</b>, every pixel is designed to turn impressions into views.</p>
+            </div>
+            <div class="stats-grid glass reveal">
+                <div class="stat-card">
+                    <h3 class="counter" data-target="22">0</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="counter" data-target="19">0</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="counter" data-target="1">0</h3>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Section -->
+    <section id="software" class="section">
+        <div class="section-header reveal">
+            <h2 class="section-title">Crafted With <span>Pro Tools</span></h2>
+            <p>Combining <b>3D rendering</b> with advanced <b>digital post-processing</b>.</p>
+        </div>
+        <div class="software-grid reveal">
+            <div class="software-card card-blender">
+                <div class="software-icon-3d blender-3d-box"><i class="fas fa-cube"></i></div>
+                <h3>Blender 3D</h3>
+                <p style="font-size: 0.85rem; color: #9ca3af; margin-top: 5px;"><b>3D Character Posing</b>, Custom Lighting & <b>Cinematic Renders</b></p>
+            </div>
+
+            <div class="software-card card-photoshop">
+                <div class="software-icon-3d photoshop-3d-box">Ps</div>
+                <h3>Adobe Photoshop</h3>
+                <p style="font-size: 0.85rem; color: #9ca3af; margin-top: 5px;"><b>Color Grading</b>, Visual Polish & <b>Custom FX</b></p>
+            </div>
+
+            <div class="software-card card-ibispaint">
+                <div class="software-icon-3d ibispaint-3d-box"><i class="fas fa-palette"></i></div>
+                <h3>Ibis Paint X</h3>
+                <p style="font-size: 0.85rem; color: #9ca3af; margin-top: 5px;"><b>Concept Sketching</b> & Graphical Adjustments</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section">
+        <div class="section-header reveal">
+            <h2 class="section-title">How It <span>Works?</span></h2>
+            <p>A seamless <b>3-step workflow</b> to get your custom thumbnail.</p>
+        </div>
+        <div class="process-container reveal">
+            <div class="process-card glass">
+                <span class="process-step-num">STEP 01</span>
+                <h3><i class="fas fa-lightbulb" style="color: #ffbd00;"></i> Share Your Idea</h3>
+                <p style="font-size: 0.88rem; color: #d1d5db; margin: 0;">Send your <b>video topic</b>, <b>skin file</b>, or rough concept via Discord or Telegram.</p>
+            </div>
+
+            <div class="process-card glass">
+                <span class="process-step-num">STEP 02</span>
+                <h3><i class="fas fa-magic" style="color: #2ed573;"></i> 3D Render & FX</h3>
+                <p style="font-size: 0.88rem; color: #d1d5db; margin: 0;">I build custom <b>3D poses in Blender</b> and apply <b>cinematic FX in Photoshop</b>.</p>
+            </div>
+
+            <div class="process-card glass">
+                <span class="process-step-num">STEP 03</span>
+                <h3><i class="fas fa-check-circle" style="color: #1e90ff;"></i> Delivery & Tweaks</h3>
+                <p style="font-size: 0.88rem; color: #d1d5db; margin: 0;">Get your high-res <b>4K thumbnail</b> with <b>unlimited minor revisions</b>!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ & Why CTR Section -->
+    <section id="info-section" class="section">
+        <div class="combo-grid reveal">
+            <div class="faq-box glass">
+                <h2 class="section-title">Got <span>Questions?</span></h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question"><span>How long does delivery take?</span><i class="fas fa-chevron-down faq-icon"></i></button>
+                        <div class="faq-answer">Usually around <b>2 to 6 days</b>. Depending on workload and complexity, it might take slightly longer to ensure the highest <b>cinematic quality</b>.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question"><span>How will I receive my files?</span><i class="fas fa-chevron-down faq-icon"></i></button>
+                        <div class="faq-answer">You will receive high-resolution files (<b>Full HD 1080p or 4K</b>) in PNG/JPG formats. Fully layered <b>PSD files</b> are also available.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question"><span>What is your revision policy?</span><i class="fas fa-chevron-down faq-icon"></i></button>
+                        <div class="faq-answer">I offer <b>unlimited minor tweaks</b> (colors, text adjustments, lighting) until you are <b>100% satisfied</b>.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question"><span>What payment methods do you accept?</span><i class="fas fa-chevron-down faq-icon"></i></button>
+                        <div class="faq-answer">We accept payments via <b>Crypto (USDT, LTC, BTC)</b>, Credit/Debit Cards, and International Bank Transfers.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question"><span>Do you offer bulk discounts?</span><i class="fas fa-chevron-down faq-icon"></i></button>
+                        <div class="faq-answer">Yes! Special <b>discounted package deals</b> are available for creators ordering <b>3 or more thumbnails</b> at once.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-container glass">
+                <div class="why-text">
+                    <h2 class="section-title">Why Thumbnails <span>Matter?</span></h2>
+                    <p>The YouTube algorithm prioritizes videos with high <b>Click-Through Rates (CTR)</b>. A professional thumbnail catches eyes instantly, multiplying your <b>views, subscribers, and channel growth</b>.</p>
+                </div>
+                
+                <div class="chart-box">
+                    <div style="display: flex; flex-direction: column; align-items: center; width: 40%;">
+                        <div style="height: 55px; width: 100%; background: #ff4757; border-radius: 8px 8px 0 0;"></div>
+                        <span style="margin-top: 10px; font-weight: 600; font-size: 0.85rem; text-align: center;">Standard<br><small style="opacity: 0.7;">2% - 4% CTR</small></span>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: center; width: 40%;">
+                        <div style="height: 165px; width: 100%; background: #2ed573; box-shadow: 0 0 25px rgba(46, 213, 115, 0.5); border-radius: 8px 8px 0 0;"></div>
+                        <span style="margin-top: 10px; font-weight: 700; color: #2ed573; font-size: 0.95rem; text-align: center;">OTKO GFX<br><small style="color: white; opacity: 0.9; font-size: 0.75rem;">10% - 15%+ CTR</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="section-header reveal">
+            <h2 class="section-title">Selected <span>Works</span></h2>
+            <p>Click images to view full <b>cinematic quality</b>.</p>
+        </div>
+
+        <div class="masonry-grid">
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb1.jpg" alt="Minecraft Thumbnail 1"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb2.jpg" alt="Minecraft Thumbnail 2"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb3.jpg" alt="Minecraft Thumbnail 3"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb4.jpg" alt="Minecraft Thumbnail 4"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb5.jpg" alt="Minecraft Thumbnail 5"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb6.jpg" alt="Minecraft Thumbnail 6"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb7.jpg" alt="Minecraft Thumbnail 7"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+        </div>
+
+        <!-- Before & After Section -->
+        <div class="section-header reveal" style="margin-top: 5rem;">
+            <h2 class="section-title">Raw vs <span>Finished</span></h2>
+            <p>Select a showcase below and drag the slider to see the <b>3D rendering & lighting transformation</b>.</p>
+        </div>
+
+        <div class="ba-tabs-nav reveal">
+            <button class="ba-tab-btn active" data-target="baSlider1"><i class="fas fa-cube"></i> Showcase 1: 3D Character Posing</button>
+            <button class="ba-tab-btn" data-target="baSlider2"><i class="fas fa-bolt"></i> Showcase 2: Cinematic Lighting & FX</button>
+        </div>
+
+        <div class="ba-slider-container active reveal" id="baSlider1">
+            <img src="images/raw1.jpg" alt="Raw Screenshot 1" class="ba-img">
+            <span class="ba-label ba-label-before">RAW SCREENSHOT</span>
+            <div class="ba-after">
+                <img src="images/thumb-final1.jpg" alt="OTKO Edited Thumbnail 1" class="ba-after-img ba-img">
+                <span class="ba-label ba-label-after">OTKO DESIGN</span>
+            </div>
+            <input type="range" min="0" max="100" value="50" class="ba-slider-input">
+        </div>
+
+        <div class="ba-slider-container reveal" id="baSlider2">
+            <img src="images/raw2.jpg" alt="Raw Screenshot 2" class="ba-img">
+            <span class="ba-label ba-label-before">RAW SCREENSHOT</span>
+            <div class="ba-after">
+                <img src="images/thumb-final2.jpg" alt="OTKO Edited Thumbnail 2" class="ba-after-img ba-img">
+                <span class="ba-label ba-label-after">OTKO DESIGN</span>
+            </div>
+            <input type="range" min="0" max="100" value="50" class="ba-slider-input">
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="section">
+        <div class="section-header reveal"><h2 class="section-title">Worked <span>With</span></h2></div>
+        <div class="clients-flex reveal">
+            <div class="client-card"><div class="avatar glass"><img src="images/client1.jpg" alt="ArSH1YA"></div><h4>ArSH1YA</h4></div>
+            <div class="client-card"><div class="avatar glass"><img src="images/client2.jpg" alt="tondar game"></div><h4>tondar game</h4></div>
+            <div class="client-card"><div class="avatar glass"><img src="images/client3.jpg" alt="TopPlayer"></div><h4>TopPlayer</h4></div>
+            <div class="client-card"><div class="avatar glass"><img src="images/client4.jpg" alt="_Amanj"></div><h4>_Amanj</h4></div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section">
+        <div class="section-header reveal">
+            <h2 class="section-title">Client <span>Feedback</span></h2>
+            <p>What YouTubers say about working with <b>OTKO GFX</b>.</p>
+        </div>
+        <div class="reviews-grid reveal">
+            <div class="review-card glass">
+                <div class="review-header">
+                    <img src="images/client1.jpg" alt="ArSH1YA" class="review-avatar">
+                    <div>
+                        <h4 style="font-size: 1rem;">ArSH1YA</h4>
+                        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">"The lighting and 3D posing on the thumbnails are insane! My video CTR went up significantly right after using OTKO's design."</p>
+            </div>
+
+            <div class="review-card glass">
+                <div class="review-header">
+                    <img src="images/client2.jpg" alt="tondar game" class="review-avatar">
+                    <div>
+                        <h4 style="font-size: 1rem;">tondar game</h4>
+                        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">"Fast delivery and incredible quality. He really understands YouTube algorithm psychology and what makes people click."</p>
+            </div>
+
+            <div class="review-card glass">
+                <div class="review-header">
+                    <img src="images/client3.jpg" alt="TopPlayer" class="review-avatar">
+                    <div>
+                        <h4 style="font-size: 1rem;">TopPlayer</h4>
+                        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">"Best Minecraft thumbnail designer I've worked with. Clean 3D renders, fast response on Discord, 10/10 recommend!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order-section" class="section">
+        <div class="glass reveal" style="max-width: 780px; margin: 0 auto; padding: 4rem 2rem; border-radius: 24px; text-align: center; border: 1px solid rgba(255,255,255,0.15);">
+            <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 10px;">Want to buy a <span>Thumbnail?</span></h2>
+            <p style="margin-bottom: 1.5rem; color: #d1d5db; font-size: 1.1rem;">Choose your preferred platform to place an order and start getting <b>more views today!</b></p>
+            
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                <button class="discount-trigger-btn" id="openPasscodeModalBtn">
+                    <i class="fas fa-gift"></i> Claim 10% VIP Discount (1 Month)
+                </button>
+
+                <button class="discount-trigger-btn yt-discount-btn" id="openYtModalBtn">
+                    <i class="fab fa-youtube"></i> Want 20% OFF? Subscribe Channel!
+                </button>
+            </div>
+
+            <div class="order-buttons-3d">
+                <a href="https://discord.com/users/otko_1z" target="_blank" class="btn-3d btn-discord-3d">
+                    <div class="btn-3d-icon"><i class="fab fa-discord"></i></div>
+                    <span>Discord (otko_1z)</span>
+                </a>
+
+                <a href="https://t.me/MAHDIFACEMAKER" target="_blank" class="btn-3d btn-telegram-3d">
+                    <div class="btn-3d-icon"><i class="fab fa-telegram-plane"></i></div>
+                    <span>Telegram (@MAHDIFACEMAKER)</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- پاپ‌آپ تخفیف ۱۰٪ -->
+    <div class="passcode-modal" id="passcodeModal">
+        <div class="passcode-box">
+            <span class="close-modal-btn" id="closePasscodeModal">&times;</span>
+            <h3 style="font-size: 1.4rem; margin-bottom: 8px; color: #fff;">🔑 10% First-Order VIP Pass</h3>
+            <p style="font-size: 0.88rem; color: #aaa;" id="modalSubTitle">Locking 10% hardware discount code for your system...</p>
+
+            <div class="countdown-box" id="countdownBox">
+                <div class="countdown-number" id="countdownTimer">3</div>
+                <p style="font-size: 0.8rem; color: #2ed573; margin-top: 15px;">Generating Secure Hardware Key...</p>
+            </div>
+
+            <div class="passcode-result" id="passcodeResult">
+                <p style="margin: 0; font-weight: bold; color: #fff;">🎉 VIP Discount Key Generated!</p>
+                <div class="passcode-code-display" id="finalPasscodeDisplay">OTKO-VIP-XXXXX</div>
+                
+                <div class="expiry-timer-box">
+                    <i class="fas fa-clock"></i> Code Expires In: <span id="codeExpiryTimer10">02:30</span>
+                </div>
+
+                <p style="font-size: 0.82rem; color: #d1d5db; margin-top: 12px; margin-bottom: 0;">Send this key to <strong>otko_1z</strong> on Discord/Telegram before it expires to claim your <b>10% discount</b>!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- پاپ‌آپ تخفیف ۲۰٪ -->
+    <div class="passcode-modal" id="ytModal">
+        <div class="passcode-box" style="border-color: #ff4757;">
+            <span class="close-modal-btn" id="closeYtModal">&times;</span>
+            <h3 style="font-size: 1.4rem; margin-bottom: 8px; color: #fff;"><i class="fab fa-youtube" style="color: #ff4757;"></i> Unlock 20% OFF Discount</h3>
+            <p style="font-size: 0.88rem; color: #aaa;">Subscribe to our YouTube channel to unlock your exclusive 20% discount key!</p>
+
+            <div id="ytActionBox">
+                <a href="https://youtube.com/@MAHDIFACEMAKER" target="_blank" class="discount-trigger-btn yt-discount-btn" id="ytSubscribeBtn" style="padding: 14px 28px; font-size: 1.05rem;">
+                    <i class="fab fa-youtube"></i> Click Here & Subscribe Channel
+                </a>
+                <p style="font-size: 0.78rem; color: #888; margin-top: 10px;">Clicking will open YouTube in a new tab. Subscribe & return here!</p>
+            </div>
+
+            <div class="countdown-box" id="ytCountdownBox" style="display: none;">
+                <div class="countdown-number" id="ytCountdownTimer" style="color: #ff4757;">5</div>
+                <p style="font-size: 0.8rem; color: #ff4757;">Verifying Subscription Status...</p>
+            </div>
+
+            <div class="passcode-result" id="ytPasscodeResult" style="border-color: #ff4757; background: rgba(255, 71, 87, 0.12);">
+                <p style="margin: 0; font-weight: bold; color: #fff;">🎉 20% OFF VIP Key Unlocked!</p>
+                <div class="passcode-code-display" id="ytFinalPasscodeDisplay" style="color: #ff4757; border-color: rgba(255, 71, 87, 0.5);">OTKO-SUB20-XXXXX</div>
+                
+                <div class="expiry-timer-box">
+                    <i class="fas fa-clock"></i> Code Expires In: <span id="codeExpiryTimer20">02:30</span>
+                </div>
+
+                <p style="font-size: 0.82rem; color: #d1d5db; margin-top: 12px; margin-bottom: 0;">Send this 20% key to <strong>otko_1z</strong> on Discord/Telegram before it expires to claim your discount!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass">
+        <div class="footer-content">
+            <div class="footer-logo">OTKO GFX<span>.</span></div>
+            <div class="social-links">
+                <a href="https://t.me/MAHDIFACEMAKER" aria-label="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://youtube.com/@MAHDIFACEMAKER" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://discord.com/users/otko_1z" aria-label="Discord" target="_blank"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 OTKO GFX. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function getSystemHardwareID() {
+            let gpuInfo = 'GenericGPU';
+            try {
+                const canvas = document.createElement('canvas');
+                const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                if (gl) {
+                    const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+                    if (debugInfo) {
+                        gpuInfo = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+                    }
+                }
+            } catch(e) {}
+
+            const hwComponents = [
+                gpuInfo,
+                screen.width + 'x' + screen.height,
+                screen.colorDepth,
+                screen.pixelDepth,
+                navigator.hardwareConcurrency || '4',
+                navigator.platform
+            ].join('###');
+
+            let hash = 0;
+            for (let i = 0; i < hwComponents.length; i++) {
+                hash = ((hash << 5) - hash) + hwComponents.charCodeAt(i);
+                hash |= 0;
+            }
+            return Math.abs(hash).toString(36).toUpperCase();
+        }
+
+        const systemID = getSystemHardwareID();
+
+        function generateCode(prefix) {
+            const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+            let randomCode = '';
+            for (let i = 0; i < 5; i++) {
+                randomCode += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return prefix + '-' + randomCode;
+        }
+
+        // شماره معکوس واقعی انقضای ۲:۳۰ دقیقه
+        function startLiveExpiryTimer(displayElement) {
+            let duration = 150;
+            
+            if (displayElement.timerInterval) {
+                clearInterval(displayElement.timerInterval);
+            }
+
+            displayElement.timerInterval = setInterval(() => {
+                let minutes = Math.floor(duration / 60);
+                let seconds = duration % 60;
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                displayElement.textContent = minutes + ":" + seconds;
+
+                if (--duration < 0) {
+                    clearInterval(displayElement.timerInterval);
+                    displayElement.textContent = "EXPIRED!";
+                }
+            }, 1000);
+        }
+
+        // سیستم ۱۰٪
+        const openModalBtn = document.getElementById('openPasscodeModalBtn');
+        const closeModalBtn = document.getElementById('closePasscodeModal');
+        const modal = document.getElementById('passcodeModal');
+        const countdownBox = document.getElementById('countdownBox');
+        const countdownTimer = document.getElementById('countdownTimer');
+        const resultBox = document.getElementById('passcodeResult');
+        const displayCode = document.getElementById('finalPasscodeDisplay');
+        const modalSubTitle = document.getElementById('modalSubTitle');
+        const timer10Display = document.getElementById('codeExpiryTimer10');
+
+        const systemStorageKey10 = 'otko_sys_key10_' + systemID;
+        let isCounting10 = false;
+
+        if(openModalBtn && modal) {
+            openModalBtn.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                let existingCode = localStorage.getItem(systemStorageKey10);
+                
+                if (existingCode) {
+                    countdownBox.style.display = 'none';
+                    modalSubTitle.textContent = "Your hardware locked discount key:";
+                    resultBox.style.display = 'block';
+                    displayCode.textContent = existingCode;
+                    startLiveExpiryTimer(timer10Display);
+                } else if (!isCounting10) {
+                    isCounting10 = true;
+                    countdownBox.style.display = 'block';
+                    resultBox.style.display = 'none';
+                    modalSubTitle.textContent = "Generating hardware discount key...";
+                    
+                    let count = 3;
+                    countdownTimer.textContent = count;
+
+                    const timerInterval = setInterval(() => {
+                        count--;
+                        if (count > 0) {
+                            countdownTimer.textContent = count;
+                        } else {
+                            clearInterval(timerInterval);
+                            const newPasscode = generateCode('OTKO-VIP');
+                            localStorage.setItem(systemStorageKey10, newPasscode);
+
+                            countdownBox.style.display = 'none';
+                            modalSubTitle.textContent = "Hardware Discount Key Locked!";
+                            resultBox.style.display = 'block';
+                            displayCode.textContent = newPasscode;
+                            isCounting10 = false;
+                            
+                            startLiveExpiryTimer(timer10Display);
+                        }
+                    }, 1000);
+                }
+            });
+        }
+
+        if(closeModalBtn && modal) {
+            closeModalBtn.addEventListener('click', () => modal.style.display = 'none');
+        }
+
+        // سیستم ۲۰٪
+        const openYtModalBtn = document.getElementById('openYtModalBtn');
+        const closeYtModalBtn = document.getElementById('closeYtModal');
+        const ytModal = document.getElementById('ytModal');
+        const ytActionBox = document.getElementById('ytActionBox');
+        const ytSubscribeBtn = document.getElementById('ytSubscribeBtn');
+        const ytCountdownBox = document.getElementById('ytCountdownBox');
+        const ytCountdownTimer = document.getElementById('ytCountdownTimer');
+        const ytPasscodeResult = document.getElementById('ytPasscodeResult');
+        const ytFinalPasscodeDisplay = document.getElementById('ytFinalPasscodeDisplay');
+        const timer20Display = document.getElementById('codeExpiryTimer20');
+
+        const systemStorageKey20 = 'otko_sys_key20_' + systemID;
+        let isCounting20 = false;
+
+        if (openYtModalBtn && ytModal) {
+            openYtModalBtn.addEventListener('click', () => {
+                ytModal.style.display = 'flex';
+                let existingCode20 = localStorage.getItem(systemStorageKey20);
+
+                if (existingCode20) {
+                    ytActionBox.style.display = 'none';
+                    ytCountdownBox.style.display = 'none';
+                    ytPasscodeResult.style.display = 'block';
+                    ytFinalPasscodeDisplay.textContent = existingCode20;
+                    startLiveExpiryTimer(timer20Display);
+                }
+            });
+        }
+
+        if (closeYtModalBtn && ytModal) {
+            closeYtModalBtn.addEventListener('click', () => ytModal.style.display = 'none');
+        }
+
+        if (ytSubscribeBtn) {
+            ytSubscribeBtn.addEventListener('click', () => {
+                if (!isCounting20) {
+                    isCounting20 = true;
+                    ytActionBox.style.display = 'none';
+                    ytCountdownBox.style.display = 'block';
+
+                    let count = 5;
+                    ytCountdownTimer.textContent = count;
+
+                    const timer20 = setInterval(() => {
+                        count--;
+                        if (count > 0) {
+                            ytCountdownTimer.textContent = count;
+                        } else {
+                            clearInterval(timer20);
+                            const newCode20 = generateCode('OTKO-SUB20');
+                            localStorage.setItem(systemStorageKey20, newCode20);
+
+                            ytCountdownBox.style.display = 'none';
+                            ytPasscodeResult.style.display = 'block';
+                            ytFinalPasscodeDisplay.textContent = newCode20;
+                            isCounting20 = false;
+
+                            startLiveExpiryTimer(timer20Display);
+                        }
+                    }, 1000);
+                }
+            });
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) otherItem.classList.remove('active');
+                });
+                item.classList.toggle('active');
+            });
+        });
+
+        // Before & After Sliders
+        const containers = document.querySelectorAll('.ba-slider-container');
+        const tabBtns = document.querySelectorAll('.ba-tab-btn');
+
+        function initBASliders() {
+            containers.forEach(container => {
+                const slider = container.querySelector('.ba-slider-input');
+                const afterBox = container.querySelector('.ba-after');
+                const afterImg = container.querySelector('.ba-after-img');
+
+                if (slider && afterBox && afterImg) {
+                    function updateWidths() {
+                        const width = container.offsetWidth;
+                        afterImg.style.width = width + 'px';
+                        afterBox.style.width = slider.value + '%';
+                    }
+
+                    slider.addEventListener('input', () => {
+                        afterBox.style.width = slider.value + '%';
+                    });
+
+                    window.addEventListener('resize', updateWidths);
+                    updateWidths();
+                }
+            });
+        }
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                containers.forEach(c => c.classList.remove('active'));
+
+                btn.classList.add('active');
+                const targetId = btn.getAttribute('data-target');
+                const targetContainer = document.getElementById(targetId);
+                if (targetContainer) {
+                    targetContainer.classList.add('active');
+                    setTimeout(initBASliders, 50);
+                }
+            });
+        });
+
+        initBASliders();
+    </script>
+</body></html>
