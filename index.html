@@ -7,25 +7,23 @@
     <!-- کد تایید گوگل کنسول شما -->
     <meta name="google-site-verification" content="V4d6TiTw0sEHqjkgGdkEejxO4MGxCJamUGUtUTzr_3Q" />
     
-    <!-- Open Graph Tags for Telegram, Discord & Social Media Link Preview -->
+    <!-- Open Graph Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://otkogfx.netlify.app/">
+    <meta property="og:url" content="https://otkogfx.github.io/otkogfx/">
     <meta property="og:title" content="OTKO GFX | Premium Minecraft Thumbnails">
     <meta property="og:description" content="High CTR • Professional • Eye Catching Minecraft Thumbnails">
-    <meta property="og:image" content="https://otkogfx.netlify.app/images/thumb1.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://otkogfx.github.io/otkogfx/images/thumb1.jpg">
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="OTKO GFX | Premium Minecraft Thumbnails">
     <meta name="twitter:description" content="High CTR • Professional • Eye Catching Minecraft Thumbnails">
-    <meta name="twitter:image" content="https://otkogfx.netlify.app/images/thumb1.jpg">
+    <meta name="twitter:image" content="https://otkogfx.github.io/otkogfx/images/thumb1.jpg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Press+Start+2P&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Press+Start+2P&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -39,16 +37,13 @@
             letter-spacing: 2px;
         }
 
-        .logo, 
-        .hero .title, 
-        .loader-logo,
-        .footer-logo {
+        /* منو و لوگوی واضح‌تر */
+        .logo {
             font-family: 'Press Start 2P', cursive, sans-serif !important;
-        }
-
-        .hero .title {
-            font-size: 3.5rem !important;
-            line-height: 1.3;
+            font-size: 1.4rem !important;
+            color: #2ed573 !important;
+            text-shadow: 0 0 15px rgba(46, 213, 115, 0.8);
+            letter-spacing: 1px;
         }
 
         body {
@@ -56,42 +51,112 @@
             color: #e5e7eb;
             margin: 0;
             padding: 0;
+            cursor: default; /* موس استاندارد بدون باگ */
         }
 
-        /* ====== استایل بنر اعلامیه تخفیف ۱۰٪ بالای هوم ====== */
-        .top-promo-banner {
-            background: linear-gradient(90deg, rgba(46, 213, 115, 0.15), rgba(88, 101, 242, 0.2), rgba(46, 213, 115, 0.15));
-            border-bottom: 1px solid rgba(46, 213, 115, 0.4);
-            color: #fff;
-            padding: 10px 15px;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.88rem;
-            font-weight: 600;
-            display: flex;
+        /* ====== دکمه جدید تخفیف نئونی در منوی اصلی ====== */
+        .nav-discount-btn {
+            background: linear-gradient(135deg, rgba(46, 213, 115, 0.25), rgba(88, 101, 242, 0.25));
+            border: 1px solid #2ed573;
+            color: #2ed573 !important;
+            padding: 8px 16px !important;
+            border-radius: 20px;
+            font-family: 'Space Grotesk', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 0.85rem !important;
+            box-shadow: 0 0 15px rgba(46, 213, 115, 0.3);
+            transition: all 0.3s ease !important;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            gap: 6px;
         }
-        .top-promo-badge {
-            background: #2ed573;
-            color: #000;
-            padding: 3px 8px;
-            border-radius: 6px;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 0.6rem;
+        .nav-discount-btn:hover {
+            background: #2ed573 !important;
+            color: #000 !important;
+            box-shadow: 0 0 25px rgba(46, 213, 115, 0.8) !important;
+            transform: scale(1.05);
         }
 
-        /* ====== استایل اختصاصی برای کلمات مهم بولد شده ====== */
+        .glass-nav {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+
+        /* ====== اصلاحات هوم (بزرگ‌تر شدن و فوکوس روی عنوان کار) ====== */
+        .hero {
+            padding-top: 140px !important;
+        }
+
+        .hero-content {
+            animation: heroEntrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            text-align: center;
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .hero-brand-subtitle {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.95rem;
+            color: #2ed573;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px rgba(46, 213, 115, 0.6);
+        }
+
+        /* تیتر اصلی خیلی بزرگ و بولد */
+        .hero .main-job-title {
+            font-family: 'Space Grotesk', sans-serif !important;
+            font-size: 4.5rem !important;
+            font-weight: 900 !important;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #ffffff 30%, #2ed573 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .hero .description {
+            font-size: 1.35rem !important;
+            color: #d1d5db;
+            margin-bottom: 40px;
+        }
+
+        /* ====== استایل اختصاصی کلمات بولد ====== */
         strong, b, .highlight-word {
             font-family: 'Space Grotesk', sans-serif !important;
             color: #2ed573 !important;
             font-weight: 700 !important;
             text-shadow: 0 0 10px rgba(46, 213, 115, 0.3);
-            letter-spacing: 0.3px;
         }
 
-        /* ====== استایل و انیمیشن گلو برای تامنیل‌ها ====== */
+        /* ====== لودینگ سریع ۵۰۰ میلی‌ثانیه‌ای ====== */
+        .loader {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: #0b0f19;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+        .loader-logo {
+            font-family: 'Press Start 2P', cursive;
+            color: #2ed573;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(46, 213, 115, 0.8);
+        }
+
+        /* ====== تامنیل‌ها و کارت‌ها ====== */
         .masonry-item {
             border-radius: 18px;
             overflow: hidden;
@@ -99,12 +164,6 @@
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.12);
             background: rgba(18, 24, 38, 0.6);
-        }
-
-        .masonry-item .img-wrapper {
-            overflow: hidden;
-            border-radius: 18px;
-            position: relative;
         }
 
         .masonry-item img {
@@ -118,65 +177,12 @@
         .masonry-item:hover {
             transform: translateY(-10px) scale(1.02);
             border-color: #2ed573;
-            box-shadow: 
-                0 20px 35px -10px rgba(0, 0, 0, 0.9),
-                0 0 25px rgba(46, 213, 115, 0.4);
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.9), 0 0 25px rgba(46, 213, 115, 0.4);
         }
 
         .masonry-item:hover img {
             transform: scale(1.08);
             filter: brightness(1.1) contrast(1.1);
-        }
-
-        .hover-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(11, 15, 25, 0.85) 0%, transparent 60%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .hover-overlay i {
-            color: #2ed573;
-            font-size: 2rem;
-            transform: scale(0.5) rotate(-15deg);
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            text-shadow: 0 0 15px rgba(46, 213, 115, 0.8);
-        }
-
-        .masonry-item:hover .hover-overlay {
-            opacity: 1;
-        }
-
-        .masonry-item:hover .hover-overlay i {
-            transform: scale(1) rotate(0deg);
-        }
-
-        @keyframes heroEntrance {
-            0% { opacity: 0; transform: scale(0.88) translateY(25px); filter: blur(10px); }
-            100% { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
-        }
-
-        @keyframes titleGlowPulse {
-            0% { text-shadow: 0 0 15px rgba(46, 213, 115, 0.3); }
-            100% { text-shadow: 0 0 45px rgba(46, 213, 115, 0.9), 0 0 80px rgba(46, 213, 115, 0.5); }
-        }
-
-        .hero-content {
-            animation: heroEntrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero .title {
-            animation: titleGlowPulse 3s infinite alternate ease-in-out;
         }
 
         .bg-glow {
@@ -189,11 +195,6 @@
                         radial-gradient(circle at 80% 80%, rgba(88, 101, 242, 0.15), transparent 50%);
             pointer-events: none;
             z-index: -1;
-            animation: pulseGlow 8s infinite alternate ease-in-out;
-        }
-        @keyframes pulseGlow {
-            0% { transform: scale(1); opacity: 0.7; }
-            100% { transform: scale(1.2); opacity: 1; }
         }
 
         .glass {
@@ -202,7 +203,7 @@
             border: 1px solid rgba(255, 255, 255, 0.15) !important;
         }
 
-        /* ====== دکمه‌ها و آیکون‌های ۳D ====== */
+        /* دکمه‌های ۳D دیسکورد و تلگرام */
         .order-buttons-3d {
             display: flex;
             gap: 25px;
@@ -223,9 +224,7 @@
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
             font-size: 1.05rem;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform-style: preserve-3d;
-            position: relative;
+            transition: all 0.4s ease;
             background: rgba(18, 24, 38, 0.9);
         }
 
@@ -237,78 +236,17 @@
             align-items: center;
             justify-content: center;
             font-size: 1.7rem;
-            transition: all 0.4s ease;
-            transform-style: preserve-3d;
-            position: relative;
         }
 
-        .btn-3d-icon i {
-            transition: transform 0.4s ease;
-            transform-style: preserve-3d;
-        }
+        .btn-discord-3d { border: 2px solid rgba(88, 101, 242, 0.5); box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.8); }
+        .btn-discord-3d .btn-3d-icon { background: linear-gradient(145deg, #6975f3, #4752c4); color: #fff; }
+        .btn-discord-3d:hover { transform: translateY(-8px); border-color: #5865F2; }
 
-        /* Discord 3D Button */
-        .btn-discord-3d {
-            border: 2px solid rgba(88, 101, 242, 0.5);
-            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.8), 0 8px 15px -3px rgba(88, 101, 242, 0.3);
-        }
-        .btn-discord-3d .btn-3d-icon {
-            background: linear-gradient(145deg, #6975f3, #4752c4);
-            color: #fff;
-            box-shadow: 
-                0 10px 20px -5px rgba(0, 0, 0, 0.9),
-                0 4px 8px rgba(88, 101, 242, 0.4),
-                inset 0 3px 5px rgba(255, 255, 255, 0.4),
-                inset 0 -4px 6px rgba(0, 0, 0, 0.4);
-            border: 1px solid #7983f5;
-        }
-        .btn-discord-3d:hover {
-            transform: translateY(-10px) rotateX(15deg) rotateY(-10deg) scale(1.03);
-            box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.95), 0 10px 20px -5px rgba(88, 101, 242, 0.4);
-            border-color: #5865F2;
-        }
-        .btn-discord-3d:hover .btn-3d-icon {
-            transform: translateZ(35px) rotate(-12deg) scale(1.2);
-            box-shadow: 
-                -10px 15px 25px -5px rgba(0, 0, 0, 0.95),
-                0 4px 10px rgba(88, 101, 242, 0.5),
-                inset 0 3px 6px rgba(255, 255, 255, 0.6);
-        }
-        .btn-discord-3d:hover .btn-3d-icon i {
-            transform: translateZ(15px);
-        }
+        .btn-telegram-3d { border: 2px solid rgba(42, 171, 238, 0.5); box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.8); }
+        .btn-telegram-3d .btn-3d-icon { background: linear-gradient(145deg, #3db5f5, #1d8cc4); color: #fff; }
+        .btn-telegram-3d:hover { transform: translateY(-8px); border-color: #2AABEE; }
 
-        /* Telegram 3D Button */
-        .btn-telegram-3d {
-            border: 2px solid rgba(42, 171, 238, 0.5);
-            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.8), 0 8px 15px -3px rgba(42, 171, 238, 0.3);
-        }
-        .btn-telegram-3d .btn-3d-icon {
-            background: linear-gradient(145deg, #3db5f5, #1d8cc4);
-            color: #fff;
-            box-shadow: 
-                0 10px 20px -5px rgba(0, 0, 0, 0.9),
-                0 4px 8px rgba(42, 171, 238, 0.6),
-                inset 0 2px 4px rgba(255,255,255,0.4);
-            border: 1px solid #64c5f9;
-        }
-        .btn-telegram-3d:hover {
-            transform: translateY(-10px) rotateX(15deg) rotateY(10deg) scale(1.03);
-            box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.95), 0 10px 20px -5px rgba(42, 171, 238, 0.4);
-            border-color: #2AABEE;
-        }
-        .btn-telegram-3d:hover .btn-3d-icon {
-            transform: translateZ(35px) rotate(12deg) scale(1.2);
-            box-shadow: 
-                10px 15px 25px -5px rgba(0, 0, 0, 0.95),
-                0 4px 10px rgba(42, 171, 238, 0.5),
-                inset 0 3px 6px rgba(255, 255, 255, 0.6);
-        }
-        .btn-telegram-3d:hover .btn-3d-icon i {
-            transform: translateZ(15px);
-        }
-
-        /* ====== دکمه‌های تخفیف نئونی ====== */
+        /* دکمه‌های تخفیف */
         .discount-trigger-btn {
             background: linear-gradient(135deg, rgba(46, 213, 115, 0.2), rgba(30, 144, 255, 0.2));
             border: 1px dashed #2ed573;
@@ -321,34 +259,20 @@
             cursor: pointer;
             transition: all 0.3s ease;
             margin: 5px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
         }
-        .discount-trigger-btn:hover {
-            background: rgba(46, 213, 115, 0.35);
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(46, 213, 115, 0.5);
-        }
+        .discount-trigger-btn:hover { transform: scale(1.05); box-shadow: 0 0 25px rgba(46, 213, 115, 0.5); }
 
         .yt-discount-btn {
             background: linear-gradient(135deg, rgba(255, 71, 87, 0.2), rgba(255, 0, 0, 0.2));
             border: 1px dashed #ff4757;
             color: #ff4757;
         }
-        .yt-discount-btn:hover {
-            background: rgba(255, 71, 87, 0.35);
-            box-shadow: 0 0 25px rgba(255, 71, 87, 0.5);
-        }
 
-        /* ====== پاپ‌آپ و تایمر انقضای کد ====== */
+        /* پاپ‌آپ‌ها */
         .passcode-modal {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            top: 0; left: 0; width: 100vw; height: 100vh;
             background: rgba(0, 0, 0, 0.88);
             backdrop-filter: blur(14px);
             z-index: 2000;
@@ -361,541 +285,40 @@
             box-shadow: 0 0 45px rgba(46, 213, 115, 0.4);
             border-radius: 24px;
             padding: 2.5rem;
-            max-width: 460px;
-            width: 90%;
+            max-width: 460px; width: 90%;
             text-align: center;
             position: relative;
-            animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
         }
-        @keyframes modalPop {
-            0% { transform: scale(0.7); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        .close-modal-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            color: #888;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-        .close-modal-btn:hover { color: #2ed573; }
+        .close-modal-btn { position: absolute; top: 15px; right: 20px; color: #888; font-size: 1.5rem; cursor: pointer; }
 
-        .countdown-box {
-            margin: 20px 0;
-            padding: 20px;
-        }
-        .countdown-number {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 4rem;
-            color: #2ed573;
-            text-shadow: 0 0 30px rgba(46, 213, 115, 0.9);
-            animation: numPulse 0.9s infinite alternate ease-in-out;
-        }
-        @keyframes numPulse {
-            0% { transform: scale(0.9); opacity: 0.6; }
-            100% { transform: scale(1.1); opacity: 1; }
-        }
+        .countdown-number { font-family: 'Press Start 2P', cursive; font-size: 4rem; color: #2ed573; }
+        .passcode-result { margin-top: 15px; background: rgba(46, 213, 115, 0.12); border: 1px solid #2ed573; border-radius: 12px; padding: 20px; display: none; }
+        .passcode-code-display { font-family: 'Press Start 2P', cursive; font-size: 0.9rem; color: #2ed573; background: #000; padding: 10px 16px; border-radius: 8px; display: inline-block; margin-top: 12px; }
 
-        .passcode-result {
-            margin-top: 15px;
-            background: rgba(46, 213, 115, 0.12);
-            border: 1px solid #2ed573;
-            border-radius: 12px;
-            padding: 20px;
-            display: none;
-            animation: codeReveal 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-        }
-        @keyframes codeReveal {
-            0% { transform: scale(0.8); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        .code-container {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 12px;
-        }
-        .passcode-code-display {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 0.9rem;
-            color: #2ed573;
-            background: #000;
-            padding: 10px 16px;
-            border-radius: 8px;
-            letter-spacing: 2px;
-            box-shadow: 0 0 20px rgba(46, 213, 115, 0.3);
-            border: 1px solid rgba(46, 213, 115, 0.5);
-        }
-        .copy-code-btn {
-            background: #2ed573;
-            color: #000;
-            border: none;
-            padding: 10px 14px;
-            border-radius: 8px;
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .copy-code-btn:hover {
-            background: #26af5f;
-            transform: scale(1.05);
-        }
+        .expiry-timer-box { margin-top: 15px; background: rgba(255, 71, 87, 0.15); border: 1px solid #ff4757; border-radius: 8px; padding: 10px 15px; font-family: 'Space Grotesk', sans-serif; color: #ff4757; font-weight: 700; }
+        .expiry-timer-box span { font-family: 'Press Start 2P', cursive; color: #fff; }
 
-        /* تایمر معکوس زنده انقضای کد */
-        .expiry-timer-box {
-            margin-top: 15px;
-            background: rgba(255, 71, 87, 0.15);
-            border: 1px solid #ff4757;
-            border-radius: 8px;
-            padding: 10px 15px;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.9rem;
-            color: #ff4757;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-        .expiry-timer-box span {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 0.85rem;
-            color: #fff;
-        }
+        /* Before & After */
+        .ba-tabs-nav { display: flex; justify-content: center; gap: 15px; margin-top: 2rem; margin-bottom: 1.5rem; }
+        .ba-tab-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); color: #a0aec0; padding: 10px 22px; border-radius: 30px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; cursor: pointer; }
+        .ba-tab-btn.active { background: #2ed573; color: #000; border-color: #2ed573; box-shadow: 0 0 20px rgba(46, 213, 115, 0.5); }
 
-        /* ====== Before & After ====== */
-        .ba-tabs-nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        .ba-tab-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: #a0aec0;
-            padding: 10px 22px;
-            border-radius: 30px;
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-            font-size: 0.92rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .ba-tab-btn:hover {
-            color: #fff;
-            border-color: #2ed573;
-            background: rgba(46, 213, 115, 0.1);
-        }
-        .ba-tab-btn.active {
-            background: #2ed573;
-            color: #000;
-            border-color: #2ed573;
-            box-shadow: 0 0 20px rgba(46, 213, 115, 0.5);
-        }
-
-        .ba-slider-container {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
-            border: 2px solid rgba(46, 213, 115, 0.4);
-            aspect-ratio: 16 / 9;
-            user-select: none;
-            display: none;
-        }
-        .ba-slider-container.active {
-            display: block;
-            animation: fadeIn 0.5s ease forwards;
-        }
-
-        .ba-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            pointer-events: none;
-        }
-        .ba-after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 50%;
-            overflow: hidden;
-            border-right: 3px solid #2ed573;
-            box-shadow: 5px 0 15px rgba(0,0,0,0.5);
-            z-index: 2;
-        }
-        .ba-after img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            object-fit: cover;
-        }
-        .ba-slider-input {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            z-index: 5;
-            cursor: ew-resize;
-        }
-        .ba-label {
-            position: absolute;
-            bottom: 15px;
-            padding: 6px 14px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            font-family: 'Press Start 2P', cursive, sans-serif;
-            font-size: 0.65rem;
-            border-radius: 6px;
-            backdrop-filter: blur(5px);
-            z-index: 3;
-            pointer-events: none;
-        }
-        .ba-label-before { right: 15px; border: 1px solid rgba(255,255,255,0.2); }
-        .ba-label-after { left: 15px; color: #2ed573; border: 1px solid #2ed573; }
-
-        /* The Process */
-        .process-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-            max-width: 1000px;
-            margin: 2.5rem auto 0;
-            position: relative;
-        }
-        .process-card {
-            padding: 1.8rem 1.5rem;
-            border-radius: 18px;
-            position: relative;
-            text-align: left;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(255, 255, 255, 0.03);
-        }
-        .process-card:hover {
-            transform: translateY(-8px);
-            border-color: #2ed573;
-            box-shadow: 0 10px 25px rgba(46, 213, 115, 0.2);
-        }
-        .process-step-num {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 0.75rem;
-            color: #2ed573;
-            background: rgba(46, 213, 115, 0.15);
-            padding: 5px 10px;
-            border-radius: 6px;
-            display: inline-block;
-            margin-bottom: 12px;
-        }
-        .process-card h3 {
-            font-size: 1.15rem;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* Software 3D Grid */
-        .software-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-            max-width: 1000px;
-            margin: 2.5rem auto 0;
-            perspective: 1200px;
-        }
-        
-        .software-card {
-            padding: 2.5rem 1.5rem;
-            border-radius: 20px;
-            text-align: center;
-            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-            transform-style: preserve-3d;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .software-card:hover {
-            transform: translateY(-10px) rotateX(15deg) rotateY(-10deg);
-            border-color: #2ed573;
-            box-shadow: -15px 25px 30px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(255,255,255,0.05);
-        }
-
-        .software-icon-3d {
-            width: 85px;
-            height: 85px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 22px;
-            font-size: 2.2rem;
-            font-weight: 900;
-            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-            animation: float3D 5s infinite alternate ease-in-out;
-            transform-style: preserve-3d;
-        }
-
-        .blender-3d-box {
-            background: linear-gradient(135deg, #ea7600, #ff9800);
-            color: #fff;
-            box-shadow: 0 10px 20px rgba(234, 118, 0, 0.4), inset 0 2px 4px rgba(255,255,255,0.4);
-            border: 2px solid #ffb74d;
-        }
-
-        .photoshop-3d-box {
-            background: linear-gradient(135deg, #001e36, #004075);
-            color: #31a8ff;
-            box-shadow: 0 10px 20px rgba(49, 168, 255, 0.4), inset 0 2px 4px rgba(255,255,255,0.2);
-            border: 2px solid #31a8ff;
-            font-family: sans-serif;
-            font-size: 2.4rem;
-        }
-
-        .ibispaint-3d-box {
-            background: linear-gradient(135deg, #005daa, #0088ff);
-            color: #fff;
-            box-shadow: 0 10px 20px rgba(0, 136, 255, 0.4), inset 0 2px 4px rgba(255,255,255,0.4);
-            border: 2px solid #64b5f6;
-        }
-
-        .card-blender:hover .blender-3d-box {
-            transform: translateZ(60px) scale(1.15) rotate(5deg);
-            box-shadow: 0 0 30px rgba(234, 118, 0, 0.9), 0 15px 25px rgba(0,0,0,0.6);
-        }
-
-        .card-photoshop:hover .photoshop-3d-box {
-            transform: translateZ(60px) scale(1.15) rotate(-5deg);
-            box-shadow: 0 0 30px rgba(49, 168, 255, 0.9), 0 15px 25px rgba(0,0,0,0.6);
-        }
-
-        .card-ibispaint:hover .ibispaint-3d-box {
-            transform: translateZ(60px) scale(1.15) rotate(5deg);
-            box-shadow: 0 0 30px rgba(0, 136, 255, 0.9), 0 15px 25px rgba(0,0,0,0.6);
-        }
-
-        @keyframes float3D {
-            0% { transform: translateY(0px); }
-            100% { transform: translateY(-10px); }
-        }
-
-        /* Reviews Grid */
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            max-width: 1000px;
-            margin: 2.5rem auto 0;
-        }
-        .review-card {
-            padding: 1.8rem;
-            border-radius: 18px;
-            text-align: left;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        .review-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(46, 213, 115, 0.4) !important;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-        .review-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-        .review-avatar {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #2ed573;
-        }
-        .review-stars {
-            color: #ffbd00;
-            font-size: 0.85rem;
-            margin-top: 2px;
-        }
-        .review-text {
-            color: #d1d5db;
-            font-size: 0.92rem;
-            line-height: 1.6;
-            font-style: italic;
-        }
-
-        /* FAQ Combo */
-        .combo-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-            align-items: start;
-        }
-
-        .why-container {
-            font-family: 'Space Grotesk', sans-serif;
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: left;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .why-text h2 {
-            font-size: 2rem;
-            margin-bottom: 0.8rem;
-            line-height: 1.2;
-        }
-        .why-text p {
-            color: #d1d5db;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .chart-box {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-around;
-            height: 220px;
-            border-bottom: 2px solid rgba(255,255,255,0.15);
-            padding-bottom: 10px;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            padding-top: 20px;
-            margin-top: 1.5rem;
-        }
-
-        .faq-box {
-            padding: 2rem;
-            border-radius: 20px;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        .faq-box h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            text-align: left;
-        }
-        .faq-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .faq-item {
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        .faq-item:hover {
-            border-color: rgba(46, 213, 115, 0.5);
-            box-shadow: 0 0 15px rgba(46, 213, 115, 0.15);
-        }
-        .faq-question {
-            width: 100%;
-            padding: 16px;
-            background: rgba(255, 255, 255, 0.04);
-            border: none;
-            color: white;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .faq-question:hover {
-            background: rgba(255, 255, 255, 0.08);
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-            padding: 0 16px;
-            color: #d1d5db;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            background: rgba(0, 0, 0, 0.25);
-        }
-        .faq-item.active .faq-answer {
-            max-height: 200px;
-            padding: 12px 16px 16px;
-        }
-        .faq-item.active .faq-icon {
-            transform: rotate(180deg);
-            color: #2ed573;
-        }
-        .faq-icon {
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
+        .ba-slider-container { max-width: 900px; margin: 0 auto; position: relative; border-radius: 20px; overflow: hidden; border: 2px solid rgba(46, 213, 115, 0.4); aspect-ratio: 16 / 9; display: none; }
+        .ba-slider-container.active { display: block; }
+        .ba-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+        .ba-after { position: absolute; top: 0; left: 0; height: 100%; width: 50%; overflow: hidden; border-right: 3px solid #2ed573; z-index: 2; }
+        .ba-after img { position: absolute; top: 0; left: 0; height: 100%; object-fit: cover; }
+        .ba-slider-input { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; z-index: 5; cursor: ew-resize; }
+        .ba-label { position: absolute; bottom: 15px; padding: 6px 14px; background: rgba(0,0,0,0.7); color: white; font-family: 'Press Start 2P', cursive; font-size: 0.65rem; border-radius: 6px; z-index: 3; }
+        .ba-label-before { right: 15px; } .ba-label-after { left: 15px; color: #2ed573; border: 1px solid #2ed573; }
 
         @media (max-width: 900px) {
-            .combo-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero .title {
-                font-size: 2.2rem !important;
-            }
+            .hero .main-job-title { font-size: 2.5rem !important; }
         }
     </style>
 </head><body>
 
-    <!-- بنر اعلامیه تخفیف ۱۰٪ بالای هوم -->
-    <div class="top-promo-banner">
-        <span class="top-promo-badge">LIMITED OFFER</span>
-        ⚡ Get <b>10% OFF</b> First Order — Valid for <b>1 Month Only!</b>
-    </div>
-
-    <!-- Loading Screen -->
-    <div class="loader">
-        <div class="loader-content">
-            <h1 class="loader-logo">OTKO GFX</h1>
-            <div class="progress-bar"><div class="progress"></div></div>
-        </div>
-    </div>
-
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-glow"></div>
-
-    <!-- Background Effects -->
-    <div class="bg-glow"></div>
-    <div id="particles"></div>
-
-    <!-- Floating Discord Button -->
-    <a href="https://discord.com/users/otko_1z" target="_blank" class="floating-discord glass" aria-label="Order on Discord">
-        <i class="fab fa-discord"></i>
-        <span>Order via Discord</span>
-    </a>
-
-    <!-- Navigation -->
+    <!-- منوی ثابت بالای صفحه با دکمه نئونی تخفیف‌ها -->
     <nav class="glass-nav">
         <div class="logo">OTKO GFX<span>.</span></div>
         <div class="nav-links">
@@ -907,15 +330,37 @@
             <a href="#portfolio">Portfolio</a>
             <a href="#reviews">Reviews</a>
             <a href="#order-section">Order</a>
+            <!-- دکمه نئونی جدید تخفیف -->
+            <a href="#order-section" class="nav-discount-btn"><i class="fas fa-gift"></i> Claim Discount Deals</a>
         </div>
     </nav>
+
+    <!-- Fast Loading Screen (فقط ۵۰۰ میلی ثانیه) -->
+    <div class="loader" id="siteLoader">
+        <div class="loader-content" style="text-align: center;">
+            <h1 class="loader-logo">OTKO GFX</h1>
+            <div class="progress-bar"><div class="progress"></div></div>
+        </div>
+    </div>
+
+    <div class="bg-glow"></div>
+
+    <!-- Floating Discord Button -->
+    <a href="https://discord.com/users/otko_1z" target="_blank" class="floating-discord glass" aria-label="Order on Discord">
+        <i class="fab fa-discord"></i>
+        <span>Order via Discord</span>
+    </a>
 
     <!-- Hero Section -->
     <header id="home" class="hero">
         <div class="hero-content">
-            <p class="subtitle mc-font" style="font-size: 0.75rem; color: #2ed573; margin-bottom: 15px;">MINECRAFT THUMBNAIL DESIGNER</p>
-            <h1 class="title parallax-text">OTKO GFX</h1>
-            <p class="description"><b>High CTR</b> <span class="dot">•</span> <b>Professional</b> <span class="dot">•</span> <b>Eye Catching</b></p>
+            <!-- برند اختصاصی به عنوان ساب‌تیتر -->
+            <p class="hero-brand-subtitle">OTKO GFX DESIGN STUDIO</p>
+            
+            <!-- تیتر اصلی و بسیار بزرگ برای معرفی کار -->
+            <h1 class="main-job-title">MINECRAFT THUMBNAIL DESIGNER</h1>
+            
+            <p class="description">High CTR <span class="dot">•</span> 3D Renders <span class="dot">•</span> Eye Catching Lighting</p>
             
             <div class="hero-buttons">
                 <a href="#portfolio" class="btn btn-primary">
@@ -989,19 +434,19 @@
             <div class="process-card glass">
                 <span class="process-step-num">STEP 01</span>
                 <h3><i class="fas fa-lightbulb" style="color: #ffbd00;"></i> Share Your Idea</h3>
-                <p style="font-size: 0.88rem; color: #d1d5db; line-height: 1.5; margin: 0;">Send your <b>video topic</b>, <b>skin file</b>, or rough concept via Discord or Telegram.</p>
+                <p style="font-size: 0.88rem; color: #d1d5db; margin: 0;">Send your <b>video topic</b>, <b>skin file</b>, or rough concept via Discord or Telegram.</p>
             </div>
 
             <div class="process-card glass">
                 <span class="process-step-num">STEP 02</span>
                 <h3><i class="fas fa-magic" style="color: #2ed573;"></i> 3D Render & FX</h3>
-                <p style="font-size: 0.88rem; color: #d1d5db; line-height: 1.5; margin: 0;">I build custom <b>3D poses in Blender</b> and apply <b>cinematic FX in Photoshop</b>.</p>
+                <p style="font-size: 0.88rem; color: #d1d5db; margin: 0;">I build custom <b>3D poses in Blender</b> and apply <b>cinematic FX in Photoshop</b>.</p>
             </div>
 
             <div class="process-card glass">
                 <span class="process-step-num">STEP 03</span>
                 <h3><i class="fas fa-check-circle" style="color: #1e90ff;"></i> Delivery & Tweaks</h3>
-                <p style="font-size: 0.88rem; color: #d1d5db; line-height: 1.5; margin: 0;">Get your high-res <b>4K thumbnail</b> with <b>unlimited minor revisions</b>!</p>
+                <p style="font-size: 0.88rem; color: #d1d5db; margin: 0;">Get your high-res <b>4K thumbnail</b> with <b>unlimited minor revisions</b>!</p>
             </div>
         </div>
     </section>
@@ -1013,42 +458,27 @@
                 <h2 class="section-title">Got <span>Questions?</span></h2>
                 <div class="faq-grid">
                     <div class="faq-item">
-                        <button class="faq-question">
-                            <span>How long does delivery take?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </button>
+                        <button class="faq-question"><span>How long does delivery take?</span><i class="fas fa-chevron-down faq-icon"></i></button>
                         <div class="faq-answer">Usually around <b>2 to 6 days</b>. Depending on workload and complexity, it might take slightly longer to ensure the highest <b>cinematic quality</b>.</div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
-                            <span>How will I receive my files?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer">You will receive high-resolution files (<b>Full HD 1080p or 4K</b>) in PNG/JPG formats. Fully layered <b>PSD files</b> are also available upon request.</div>
+                        <button class="faq-question"><span>How will I receive my files?</span><i class="fas fa-chevron-down faq-icon"></i></button>
+                        <div class="faq-answer">You will receive high-resolution files (<b>Full HD 1080p or 4K</b>) in PNG/JPG formats. Fully layered <b>PSD files</b> are also available.</div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
-                            <span>What is your revision policy?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer">I offer <b>unlimited minor tweaks</b> (colors, text adjustments, lighting) until you are <b>100% satisfied</b> with the final thumbnail.</div>
+                        <button class="faq-question"><span>What is your revision policy?</span><i class="fas fa-chevron-down faq-icon"></i></button>
+                        <div class="faq-answer">I offer <b>unlimited minor tweaks</b> (colors, text adjustments, lighting) until you are <b>100% satisfied</b>.</div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
-                            <span>What payment methods do you accept?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </button>
+                        <button class="faq-question"><span>What payment methods do you accept?</span><i class="fas fa-chevron-down faq-icon"></i></button>
                         <div class="faq-answer">We accept payments via <b>Crypto (USDT, LTC, BTC)</b>, Credit/Debit Cards, and International Bank Transfers.</div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Do you offer bulk discounts?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </button>
+                        <button class="faq-question"><span>Do you offer bulk discounts?</span><i class="fas fa-chevron-down faq-icon"></i></button>
                         <div class="faq-answer">Yes! Special <b>discounted package deals</b> are available for creators ordering <b>3 or more thumbnails</b> at once.</div>
                     </div>
                 </div>
@@ -1062,12 +492,12 @@
                 
                 <div class="chart-box">
                     <div style="display: flex; flex-direction: column; align-items: center; width: 40%;">
-                        <div style="height: 55px; width: 100%; background: #ff4757; border-radius: 8px 8px 0 0; animation: chartGrow 2s ease-out forwards;"></div>
+                        <div style="height: 55px; width: 100%; background: #ff4757; border-radius: 8px 8px 0 0;"></div>
                         <span style="margin-top: 10px; font-weight: 600; font-size: 0.85rem; text-align: center;">Standard<br><small style="opacity: 0.7;">2% - 4% CTR</small></span>
                     </div>
 
                     <div style="display: flex; flex-direction: column; align-items: center; width: 40%;">
-                        <div style="height: 165px; width: 100%; background: #2ed573; box-shadow: 0 0 25px rgba(46, 213, 115, 0.5); border-radius: 8px 8px 0 0; animation: chartGrow 2.5s ease-out forwards;"></div>
+                        <div style="height: 165px; width: 100%; background: #2ed573; box-shadow: 0 0 25px rgba(46, 213, 115, 0.5); border-radius: 8px 8px 0 0;"></div>
                         <span style="margin-top: 10px; font-weight: 700; color: #2ed573; font-size: 0.95rem; text-align: center;">OTKO GFX<br><small style="color: white; opacity: 0.9; font-size: 0.75rem;">10% - 15%+ CTR</small></span>
                     </div>
                 </div>
@@ -1083,16 +513,16 @@
         </div>
 
         <div class="masonry-grid">
-            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb1.jpg" alt="Minecraft Thumbnail 1" class="lazy" data-full="images/thumb1.jpg"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
-            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb2.jpg" alt="Minecraft Thumbnail 2" class="lazy" data-full="images/thumb2.jpg"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
-            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb3.jpg" alt="Minecraft Thumbnail 3" class="lazy" data-full="images/thumb3.jpg"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
-            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb4.jpg" alt="Minecraft Thumbnail 4" class="lazy" data-full="images/thumb4.jpg"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
-            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb5.jpg" alt="Minecraft Thumbnail 5" class="lazy" data-full="images/thumb5.jpg"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
-            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb6.jpg" alt="Minecraft Thumbnail 6" class="lazy" data-full="images/thumb6.jpg"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
-            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb7.jpg" alt="Minecraft Thumbnail 7" class="lazy" data-full="images/thumb7.jpg"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb1.jpg" alt="Minecraft Thumbnail 1"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb2.jpg" alt="Minecraft Thumbnail 2"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb3.jpg" alt="Minecraft Thumbnail 3"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb4.jpg" alt="Minecraft Thumbnail 4"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb5.jpg" alt="Minecraft Thumbnail 5"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb6.jpg" alt="Minecraft Thumbnail 6"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
+            <div class="masonry-item reveal"><div class="img-wrapper"><img src="images/thumb7.jpg" alt="Minecraft Thumbnail 7"><div class="hover-overlay"><i class="fas fa-expand"></i></div></div></div>
         </div>
 
-        <!-- Before & After Transformation Section -->
+        <!-- Before & After Section -->
         <div class="section-header reveal" style="margin-top: 5rem;">
             <h2 class="section-title">Raw vs <span>Finished</span></h2>
             <p>Select a showcase below and drag the slider to see the <b>3D rendering & lighting transformation</b>.</p>
@@ -1104,7 +534,7 @@
         </div>
 
         <div class="ba-slider-container active reveal" id="baSlider1">
-            <img src="images/raw1.jpg" alt="Raw Minecraft Screenshot 1" class="ba-img">
+            <img src="images/raw1.jpg" alt="Raw Screenshot 1" class="ba-img">
             <span class="ba-label ba-label-before">RAW SCREENSHOT</span>
             <div class="ba-after">
                 <img src="images/thumb-final1.jpg" alt="OTKO Edited Thumbnail 1" class="ba-after-img ba-img">
@@ -1114,7 +544,7 @@
         </div>
 
         <div class="ba-slider-container reveal" id="baSlider2">
-            <img src="images/raw2.jpg" alt="Raw Minecraft Screenshot 2" class="ba-img">
+            <img src="images/raw2.jpg" alt="Raw Screenshot 2" class="ba-img">
             <span class="ba-label ba-label-before">RAW SCREENSHOT</span>
             <div class="ba-after">
                 <img src="images/thumb-final2.jpg" alt="OTKO Edited Thumbnail 2" class="ba-after-img ba-img">
@@ -1207,16 +637,16 @@
         </div>
     </section>
 
-    <!-- پاپ‌آپ تخفیف ۱۰٪ با تایمر معکوس زنده ۲:۳۰ -->
+    <!-- پاپ‌آپ تخفیف ۱۰٪ -->
     <div class="passcode-modal" id="passcodeModal">
         <div class="passcode-box">
             <span class="close-modal-btn" id="closePasscodeModal">&times;</span>
             <h3 style="font-size: 1.4rem; margin-bottom: 8px; color: #fff;">🔑 10% First-Order VIP Pass</h3>
-            <p style="font-size: 0.88rem; color: #aaa; margin-bottom: 10px;" id="modalSubTitle">Locking 10% hardware discount code for your system...</p>
+            <p style="font-size: 0.88rem; color: #aaa;" id="modalSubTitle">Locking 10% hardware discount code for your system...</p>
 
             <div class="countdown-box" id="countdownBox">
                 <div class="countdown-number" id="countdownTimer">3</div>
-                <p style="font-size: 0.8rem; color: #2ed573; margin-top: 15px; font-weight: 600;">Generating Secure Hardware Key...</p>
+                <p style="font-size: 0.8rem; color: #2ed573; margin-top: 15px;">Generating Secure Hardware Key...</p>
             </div>
 
             <div class="passcode-result" id="passcodeResult">
@@ -1226,7 +656,6 @@
                     <button class="copy-code-btn" id="copyBtn10"><i class="fas fa-copy"></i> Copy</button>
                 </div>
                 
-                <!-- تایمر معکوس زنده انقضای کد ۲:۳۰ -->
                 <div class="expiry-timer-box">
                     <i class="fas fa-clock"></i> Code Expires In: <span id="codeExpiryTimer10">02:30</span>
                 </div>
@@ -1236,12 +665,12 @@
         </div>
     </div>
 
-    <!-- پاپ‌آپ تخفیف ۲۰٪ سابسکرایب یوتیوب با تایمر معکوس زنده ۲:۳۰ -->
+    <!-- پاپ‌آپ تخفیف ۲۰٪ -->
     <div class="passcode-modal" id="ytModal">
-        <div class="passcode-box" style="border-color: #ff4757; box-shadow: 0 0 45px rgba(255, 71, 87, 0.4);">
+        <div class="passcode-box" style="border-color: #ff4757;">
             <span class="close-modal-btn" id="closeYtModal">&times;</span>
             <h3 style="font-size: 1.4rem; margin-bottom: 8px; color: #fff;"><i class="fab fa-youtube" style="color: #ff4757;"></i> Unlock 20% OFF Discount</h3>
-            <p style="font-size: 0.88rem; color: #aaa; margin-bottom: 15px;">Subscribe to our YouTube channel to unlock your exclusive 20% discount key!</p>
+            <p style="font-size: 0.88rem; color: #aaa;">Subscribe to our YouTube channel to unlock your exclusive 20% discount key!</p>
 
             <div id="ytActionBox">
                 <a href="https://youtube.com/@MAHDIFACEMAKER" target="_blank" class="discount-trigger-btn yt-discount-btn" id="ytSubscribeBtn" style="padding: 14px 28px; font-size: 1.05rem;">
@@ -1251,18 +680,17 @@
             </div>
 
             <div class="countdown-box" id="ytCountdownBox" style="display: none;">
-                <div class="countdown-number" id="ytCountdownTimer" style="color: #ff4757; text-shadow: 0 0 30px rgba(255, 71, 87, 0.9);">5</div>
-                <p style="font-size: 0.8rem; color: #ff4757; margin-top: 15px; font-weight: 600;">Verifying Subscription Status...</p>
+                <div class="countdown-number" id="ytCountdownTimer" style="color: #ff4757;">5</div>
+                <p style="font-size: 0.8rem; color: #ff4757;">Verifying Subscription Status...</p>
             </div>
 
             <div class="passcode-result" id="ytPasscodeResult" style="border-color: #ff4757; background: rgba(255, 71, 87, 0.12);">
                 <p style="margin: 0; font-weight: bold; color: #fff;">🎉 20% OFF VIP Key Unlocked!</p>
                 <div class="code-container">
-                    <div class="passcode-code-display" id="ytFinalPasscodeDisplay" style="color: #ff4757; border-color: rgba(255, 71, 87, 0.5); box-shadow: 0 0 20px rgba(255, 71, 87, 0.3);">••••••••</div>
+                    <div class="passcode-code-display" id="ytFinalPasscodeDisplay" style="color: #ff4757; border-color: rgba(255, 71, 87, 0.5);">••••••••</div>
                     <button class="copy-code-btn" id="copyBtn20" style="background: #ff4757; color: #fff;"><i class="fas fa-copy"></i> Copy</button>
                 </div>
                 
-                <!-- تایمر معکوس زنده انقضای کد ۲:۳۰ -->
                 <div class="expiry-timer-box">
                     <i class="fas fa-clock"></i> Code Expires In: <span id="codeExpiryTimer20">02:30</span>
                 </div>
@@ -1287,15 +715,20 @@
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <span class="close-lightbox">&times;</span>
-        <img class="lightbox-content" id="lightbox-img" alt="Enlarged Thumbnail">
-    </div>
-
     <!-- Scripts -->
     <script src="script.js"></script>
     <script>
+        // لودینگ بسیار سریع ۵۰۰ میلی‌ثانیه‌ای
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loader = document.getElementById('siteLoader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    loader.style.visibility = 'hidden';
+                }
+            }, 500);
+        });
+
         function getSystemHardwareID() {
             let gpuInfo = 'GenericGPU';
             try {
@@ -1315,9 +748,7 @@
                 screen.colorDepth,
                 screen.pixelDepth,
                 navigator.hardwareConcurrency || '4',
-                navigator.maxTouchPoints || '0',
-                navigator.platform,
-                new Date().getTimezoneOffset()
+                navigator.platform
             ].join('###');
 
             let hash = 0;
@@ -1339,11 +770,49 @@
             return prefix + '-' + randomCode;
         }
 
-        // تابع شماره معکوس واقعی و ثابت بر اساس زمان انقضا
+        // کپی متن
+        function copyTextToClipboard(text, btnElement) {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showCopiedSuccess(btnElement);
+                }).catch(() => {
+                    fallbackCopyText(text, btnElement);
+                });
+            } else {
+                fallbackCopyText(text, btnElement);
+            }
+        }
+
+        function fallbackCopyText(text, btnElement) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.top = "0";
+            textArea.style.left = "0";
+            textArea.style.opacity = "0";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showCopiedSuccess(btnElement);
+            } catch (err) {}
+            document.body.removeChild(textArea);
+        }
+
+        function showCopiedSuccess(btnElement) {
+            const originalText = btnElement.innerHTML;
+            btnElement.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            setTimeout(() => {
+                btnElement.innerHTML = originalText;
+            }, 2000);
+        }
+
+        // تایمر معکوس زنده ۲:۳۰
         function startLiveExpiryTimer(displayElement, storageExpiryKey) {
             let expiryTime = localStorage.getItem(storageExpiryKey);
             if (!expiryTime) {
-                expiryTime = Date.now() + 150 * 1000; // ۱۵۰ ثانیه = ۲ دقیقه و ۳۰ ثانیه
+                expiryTime = Date.now() + 150 * 1000;
                 localStorage.setItem(storageExpiryKey, expiryTime);
             } else {
                 expiryTime = parseInt(expiryTime, 10);
@@ -1373,7 +842,7 @@
             displayElement.timerInterval = setInterval(updateDisplay, 1000);
         }
 
-        // ====== سیستم پاپ‌آپ تخفیف ۱۰٪ ======
+        // سیستم ۱۰٪
         const openModalBtn = document.getElementById('openPasscodeModalBtn');
         const closeModalBtn = document.getElementById('closePasscodeModal');
         const modal = document.getElementById('passcodeModal');
@@ -1431,12 +900,7 @@
         if(copyBtn10) {
             copyBtn10.addEventListener('click', () => {
                 const code = localStorage.getItem(systemStorageKey10) || '';
-                navigator.clipboard.writeText(code).then(() => {
-                    copyBtn10.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                    setTimeout(() => {
-                        copyBtn10.innerHTML = '<i class="fas fa-copy"></i> Copy';
-                    }, 2000);
-                });
+                copyTextToClipboard(code, copyBtn10);
             });
         }
 
@@ -1444,7 +908,7 @@
             closeModalBtn.addEventListener('click', () => modal.style.display = 'none');
         }
 
-        // ====== سیستم پاپ‌آپ تخفیف ۲۰٪ سابسکرایب یوتیوب ======
+        // سیستم ۲۰٪
         const openYtModalBtn = document.getElementById('openYtModalBtn');
         const closeYtModalBtn = document.getElementById('closeYtModal');
         const ytModal = document.getElementById('ytModal');
@@ -1477,12 +941,7 @@
         if(copyBtn20) {
             copyBtn20.addEventListener('click', () => {
                 const code = localStorage.getItem(systemStorageKey20) || '';
-                navigator.clipboard.writeText(code).then(() => {
-                    copyBtn20.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                    setTimeout(() => {
-                        copyBtn20.innerHTML = '<i class="fas fa-copy"></i> Copy';
-                    }, 2000);
-                });
+                copyTextToClipboard(code, copyBtn20);
             });
         }
 
@@ -1520,7 +979,7 @@
             });
         }
 
-        // FAQ Accordion Logic
+        // FAQ Accordion
         document.querySelectorAll('.faq-question').forEach(btn => {
             btn.addEventListener('click', () => {
                 const item = btn.parentElement;
@@ -1531,7 +990,7 @@
             });
         });
 
-        // ====== اسکریپت ۲ نمونه Before & After تب‌دار ======
+        // Before & After Sliders
         const containers = document.querySelectorAll('.ba-slider-container');
         const tabBtns = document.querySelectorAll('.ba-tab-btn');
 
